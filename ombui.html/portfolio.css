@@ -16,28 +16,7 @@
   height: 95vh;
   position: relative;
 }
-nav{
-  position: absolute;
-  left: 15%;
-  right: 15%;
-  top: 0;
-  width: 70%;
-  padding: 1rem 0rem;
-}
-nav ul{
-  display: flex;
-}
-nav li{
-  margin-right: 2rem;
-}
-nav a{
-  font-size: .9rem;
-  font-weight: 500;
-  color: #817a7a;
-}
-nav li :first-child a{
-  color: #0e0d0d;
-}
+
 .hero-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -96,122 +75,164 @@ nav li :first-child a{
   flex-wrap: wrap;
 }
 .wrapper img{
-  height: 80px;
+  height: 100px;
   margin-bottom: 10rem;
   object-fit: cover;
 }
 /*---------------------------------------------------specifics....................*/
 .specifics{
-  margin-top: 4rem;
-  margin-bottom: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
 .specifics h1{
   font-size: 1.7rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 .spec-grid.header-text p{
   font-size: .8rem;
   color: #666;
   line-height: 1.6rem;
   font-weight: 500;
-}
-.spec-grid.header-text{
-  margin-bottom: 2.3rem;
-}
-.spec-grid{
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px;
-  overflow: hidden;
-  width: 80%;
-  height: fit-content;
-}
-.spec-item{
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-}
-.spec-item h2{
-  font-size: 2rem;
-  margin-bottom: .5rem;
-}
-.spec-item p{
-font-size: 0.8rem;
-line-height: 1.4rem;
-}
-.ui-card p, .ux-card, .uy-card p{
-  margin-bottom: 1.2rem;
-}
-.ui-card{
-  background-image: url(/ombui.html/images/autocad2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 1rem;
   
 }
-.ui-card .overlay{
-  background-color: rgba(118, 141, 247, 0.6);
-  color: #fff;
-  overflow-x: hidden;
+
+/*------------------------------------About-------------------------*/
+#about{
+  padding: 60px 0;
+  color: #ababab;
+}
+.container{
+  margin: 3rem 3rem;
 }
 
-.ux-card{
-  padding: 1rem;
-  background-image: url(/ombui.html/images/webdesign.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.ux-card .overlay,.uy-card .overlay,.up-card .overlay,.uj-card .overlay,.uz-card, .overlay{
-  background-color: rgba(59, 133, 239, 0.6);
-  color: #fff;
-  overflow-x: hidden;
+.about-co1-1{
+  flex-basis: 30%;
+  
 }
-.ui-card .overlay h2,.uj-card .overlay h2,.up-card .overlay h2,
-.ux-card .overlay h2,.uy-card .overlay h2,.uz-card .overlay h2,
-.ui-card .overlay p,.uj-card .overlay p,.up-card .overlay p,
-.ux-card .overlay p,.uy-card .overlay p,.uz-card .overlay p{
-  color: #333;
+.about-co1-1 img{
+  width: 100%;
+  border-radius: 15px;
+  
+
 }
-.ui-card button,
-.uj-card button,
-.up-card button,
-.ux-card button,
-.uy-card button,
-.uz-card button{
-  background: transparent;
-  padding: 1rem 2rem;
-  border-radius: 5px;
+.about-co1-2{
+    flex-basis: 65%;
+    
+    
+}
+.sub-title{
+  font-size: 80px;
+  font-weight: 600;
+  color: #da4272;
+}
+.tab-titles{
+  display: flex;
+  margin: 20px 40px;
+}
+.tab-links{
+  margin-right: 100px;
+  font-size: 18px;
   font-weight: 500;
-  text-transform: uppercase;
-  border: 1px solid #fff;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after{
+ width: 50%;
+}
+.tab-contents ol li{
+  list-style: none;
+  margin: 10px 0;
+  line-height: 15px;
+ 
+  
+}
+.tab-contents ol li span{
+  color: #b54769;
+  font-size: 20px;
+   
+}
+.tab-contents{
+  display: none;
+ 
+}
+.tab-contents.active-tab{
+display: block;
+}
+/*===================================services================*/
+#service{
+  padding: 1rem 0;
+}
+.sub-title{
+  font-size: 80px;
+}
+.services-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-gap: 40px;
+  
+  
+}
+.services-list div{
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+ 
+}
+.services-list div h2{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div p{
+  line-height: 20px;
+  font-weight: bold;
+  
+}
+.services-list div i{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div a{
+  text-decoration: none;
   color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
 }
-.uy-card{
-  padding: 1rem;
-  background-image: url(/ombui.html/images/solidworks.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+.services-list div:hover{
+  background-color: #ff004f;
+  transform: translateY(-10px);
+  
 }
-.uz-card{
-  padding: 1rem;
-  background-image: url(/ombui.html/images/eaglecad.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+.button-link{
+  border-radius: 6px;
+  color: #f30651;
+  font-size: 20px;
+   padding: 5px 5px;
+
 }
-.uj-card{
-  padding: 1rem;
-  background-image: url(/ombui.html/images/cprogramming.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.up-card{
-  padding: 1rem;
-  background-image: url(/ombui.html/images/transmission.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+/*=====================================contact==================*/
 .contact-me{
    
   margin-top: 2rem;
@@ -226,8 +247,7 @@ line-height: 1.4rem;
 }
 .contact-me h1{
   font-size: 1.9rem;
-  
-  
+   
   
 }
 .contact-me button{
@@ -273,11 +293,23 @@ line-height: 1.4rem;
   height: 80px;
 }
 .contact-me{
-  margin-top: -4rem;
-  
+  margin-top: 0rem;
+  }
+  .about-co1-1{
+    flex-basis: 65%;
+    margin-left: 2rem;
+        
 }
-body{
-  margin-left: 10px;
+  .about-co1-2{
+    flex-basis: 65%;
+    margin-left: 2rem;
+    width: 200px;       
+}
+.sub-title{
+  font-size: 40px;
+}
+.container{
+  margin: 0rem 0rem;
 }
 .hero-text{
   padding-left: 10%;

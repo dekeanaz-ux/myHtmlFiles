@@ -81,16 +81,29 @@ nav{
 .logo{
 width: 140px;
 }
- ul, li {
-  display: flex;
+nav ul li{
+  display: inline-block;
   list-style: none;
-  margin: 10px 10px;
-  
+  margin: 10px 20px;
 }
-nav, ul, li, a{
+
+nav ul li a{
   color: #ffff;
   text-decoration: none;
   font-size: 18px;
+  position: relative;
+ }
+ nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+ }
+ nav ul li a:hover::after{
+ width: 100%;
  }
  .header-text{
   margin-top: 20%;
@@ -230,26 +243,29 @@ display: block;
 }
 .Work-list{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-gap: 10px;
   margin-top: 50px;
   
 }
 .work{
   border-radius: 10px;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; 
   transition: transform 0.5s;
+  height: 60%;
    
 }
 .work img{
   width: 100%;
   border-radius: 10px;
   display: block;
+  
+  
 }
 .layer{
   width: 100%;
-  height: 0;
+  height: 20%;
   background: linear-gradient(rgba(0,0,0,6),#f30651);
   border-radius: 10px;
   position: absolute;
@@ -290,7 +306,7 @@ display: block;
  }
  .btn{
   display: block;
-  margin: 50px auto;
+  margin: 10px auto;
   width: fit-content;
   border: 1px solid #ff004f;
   padding: 14px 50px;
