@@ -1,118 +1,159 @@
-*{
-  margin: 10px 10px;
-  box-sizing: border-box;
-}
+
+
 html{
   scroll-behavior: smooth;
 }
 
 
-#hero{
-  width: 100%;
-  min-height: 50vh;
-  background: linear-gradient(45deg, #08001f,#30197d);
-  color: #fff;
-}
+
 /*---------------------------------------------------navigation--------------------------*/
 nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-color: black;
 }
- ul, li {
+
+.flex{
   display: flex;
+  gap: var(--gap, 1rem);
+}
+.primary-header{
+  align-content: center;
+  justify-content: flex-end;
+}
+
+.mobile-nav-toggle{
+  display: none;
+}
+.primary-navigation{
   list-style: none;
-  margin: 10px 10px;
-    
+  padding: 0;
+  margin: 0;
+  background: hsl(0 0% 100%/0.1);
+  backdrop-filter: brul(1rem);
+}
+.primary-navigation a{
+  text-decoration: none;
 }
   nav, ul, li a{
-  color: #ffff;
+  color: white;
   text-decoration: none;
   font-size: 18px;
   
  }
- /*--------------------------------Digital Clock--------------------------------*/
- 
-.container{
-  width: 400px;
-  height: 120px;
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  transform: translate(-30%, -30%);  
-}
-.clock{
-  width: 100%;
-  height: 100%;
-  background: rgba(235, 0, 255, 0.11);
-  border-radius: 10px;
+ .back-image{
+  background: url(/ombui.html/images/wp3027376.webp);
+ }
+ .header{
   display: flex;
+  flex-direction: row;
+  color: red;
+  font-family: sans-serif;
+  font-style: oblique;
+  font-size: larger;
+  font-weight: 600;
+  margin-bottom: 140px;
   align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(40px);
-}
-.container::before{
-  content: '';
-  width: 90px;
-  height: 90px;
-  background: #f41b75;
-  border-radius: 5px;
-  position: absolute;
-  left: -20px;
-  top: -30px;
-  z-index: -1;
-}
-.container::after{
-  content: '';
-  width: 90px;
-  height: 90px;
-  background: #419aff;
-  border-radius: 50%;
-  position: absolute;
-  right: -30px;
-  bottom: -50px;
-  z-index: -1;
-}
-.clock span{
-  font-size: 80px;
-  width: 110px;
-  display: inline-block;
+ }
+ .name{
   text-align: center;
-  position: relative;
-}
-.clock span::after{
+  z-index: -30px;
+ }
+ .course{
+  text-align: center;
+ }
+ .softwares-image img{
+  height: 180px;
+  
+  border: solid;
+  border-radius: 160%;
+ }
+ .software-logos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  
+ 
+ }
+ .brands{  
+  padding: 2rem;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  background-color: white;
 
-font-size: 16px;
-position: absolute;
-bottom: -5px;
-left: 50%;
-transform: translateX(-50%);
+  
 }
-#hrs::after{
-  content: 'HOURS';
-}
-#min::after{
-  content: 'MINS';
-}
-#sec::after{
-  content: 'SECS';
-}
+
  /*-----------------------------------Content--------------------*/
 .containers h1{
   color: blue;
   font-size: 300;
   font-weight: 500;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+}
+#softwares h1{
+  text-align: center;
+ 
+
 }
 #softwares h2{
   color: #ff004f;
   font-size: 300;
+
+}
+  
+  .designs{
+    text-align: center;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+  }
+
+.autocad{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+  background-color: #30197d; 
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+   
+}
+.autocad-logo{
+  flex-basis: 30%;
+  align-self: center;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  
+
+}
+.autocad-content{
+  flex-basis: 50%;
+  background-color: #30197d;
+  background: url(/ombui.html/images/autocad2.jpg);
+  backdrop-filter: brul(1rem);
+  background-repeat: round;
+  color: #30197d;
+  font-weight: 500;
+  font-family: sans-serif;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
 }
 
 .circuits{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   grid-gap: 40px;
+  background-color: #30197d;
+  padding: 20px;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
   
  }
  .circuits button{
@@ -128,38 +169,209 @@ transform: translateX(-50%);
  .circuits button:hover{
   background: #ff004f;
  }
- nav .fa-solid{
-  display: none;
- }
- /*--------------------------------------css for small screens----------------*/
- @media only screen and (max-width: 600px){
-
-  nav .fa-solid{
-  display: block;
-  font-size: 25px;
- }
- nav ul{
-  background: #ff004f;
-  position: absolute;
-  top: 0;
-  right: -200px;
-  width: 150px;
-  height: 300px;
-  padding-top: 50px;
-  z-index: 2;
-  transition: right 1s;
+ 
+ .eagle{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
   
  }
- ul, li{
+ .eagle-logo{
+  flex-basis: 40%;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+ }
+ .eagle-logo img{
+  object-fit: fill;
+  max-width: 100%;
+ }
+   .eagle-content{
+    flex-basis: 50%;
+    background-color: rgb(231, 171, 147);
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    
+  }
+  .eaglecad{
+    background-color: rgb(231, 171, 147);
+  }
+  .power{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+  }
+  .power-logo{
+    flex-basis: 40%; 
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+      
+  }
+  .power-logo img{
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    
+  }
+  .power-content{
+    flex-basis: 40%;
+    padding: 10px;
+    background: url(/ombui.html/images/transmission.jpg);    
+    backdrop-filter: brul(1rem);
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+  }
+  .webpage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+  }
+  .webpage-logo{
+    flex-basis: 40%;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    
+  }
+  .webpage-content{
+    flex-basis: 50%;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+
+  }
+  .Programming-content{
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+  }
+  #service{
+    padding: 30px 0;
+  }
+  .services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    padding: 2rem;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    background-color: white;
+    color: white;
+  }
+  .services-list div{
+    background: #30197d;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+  }
+  .services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    
+  }
+  .services-list div p{
+    line-height: 20px;
+    font-size: x-large;
+  }
+  .services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+
+  .services-list div:hover{
+    background-color: #ff004f;
+    transform: translateY(-10px);
+    color: white;
+  }
+  .button-link{
+    border-radius: 6px;
+    color: #f30651;
+    font-size: 20px;
+     padding: 5px 5px;
+  
+  }
+  .mobile-nav-toggle{
+    display: none;
+  }
+ /*--------------------------------------css for small screens----------------*/
+ @media only screen and (max-width: 1000px){
+  body{
+    padding: 10px;
+  }
+  .primary-navigation{
+    --gap: 1em;
+    position: fixed;
+    inset: 0 0 0 30%;
+    z-index: 1000;
+    flex-direction: column;
+    padding: min(20vh, 5rem) 2rem;
+    height: 100vh;
+  
+    transform: translateX(100%);
+    transition: transform 1s ease-out;
+   }
+   .primary-navigation[data-visible="true"]{
+    transform: translateX(0%);
+   }
+   .nav-styles{
+    font-family: sans-serif;
+    letter-spacing: 2;
+    text-emphasis-color: white;
+    color: rgb(230, 6, 17);
+    text-transform: uppercase;
+  
+  }
+   .mobile-nav-toggle{
   display: block;
-  margin-right: 10px;
- }
- nav ul .fa-solid{
   position: absolute;
-  top: 25px;
-  left: 25px;
-  cursor: pointer;
+  z-index: 9999;
+  background-color: transparent;
+  background: url("fa-solid fa-bars");
+  background-repeat: no-repeat;
+  border: 0;
+  width: 1rem;
+  aspect-ratio: 1;
+  top: 2rem;
+  right: 2rem;
+  
+   }
+   .mobile-nav-toggle[arai-expanded="true"] {
+    background-image: url("fa-solid fa-xmark");
+   }
+   .sr-only{
+    color: red;
+   }
+
+ .software-logos{
+  width: fit-content;
+  justify-content: center;
+  display: none; 
+  justify-content: space-around;
  }
+ 
+ .autocad-logo{
+  flex-basis: 100%;
+  margin-left: 35px;
+
+ }
+ .autocad-content{
+  flex-basis: 100%;
+  align-content: center;
+ }
+ .webpage-logo, .power-logo, .eagle-logo{
+  flex-basis: 100%;
+ }
+ .webpage-content, .power-content, .eagle-content{
+  flex-basis: 100%;
+ }
+ 
   }
 
  

@@ -17,6 +17,7 @@ body{
   border: solid;
   border-color: rgb(20, 20, 90);
   border-radius: 20px;
+  justify-content: center;
   
 }
 .display-layout{
@@ -227,8 +228,11 @@ body{
  font-size: 1.2rem;
 }
  /*---------------------------css for small screens------------*/
- @media only screen and (max-width: 600px)
+ @media only screen and (max-width: 1000px)
  {
+  .project-background{
+    justify-content: center;
+  }
   .chicken-project{
     flex-basis: 100%;
   }
